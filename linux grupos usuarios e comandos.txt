@@ -1,0 +1,126 @@
+everton@DESKTOP-S8VGCH6:~$ sudo useradd ahitt
+[sudo] password for everton:
+useradd: user 'ahitt' already exists
+everton@DESKTOP-S8VGCH6:~$ useradd ahitt
+useradd: user 'ahitt' already exists
+everton@DESKTOP-S8VGCH6:~$ useradd ctee
+useradd: user 'ctee' already exists
+everton@DESKTOP-S8VGCH6:~$ sudo useradd kath
+everton@DESKTOP-S8VGCH6:~$ sudo useradd ahitt
+useradd: user 'ahitt' already exists
+everton@DESKTOP-S8VGCH6:~$ usermod -c "representante de vendas" ahitt
+usermod: Permission denied.
+usermod: cannot lock /etc/passwd; try again later.
+everton@DESKTOP-S8VGCH6:~$ sudo usermod -c "representante de vendas" ahitt
+everton@DESKTOP-S8VGCH6:~$ sudo usermod -e 2024-10-25
+Usage: usermod [options] LOGIN
+
+Options:
+  -b, --badnames                allow bad names
+  -c, --comment COMMENT         new value of the GECOS field
+  -d, --home HOME_DIR           new home directory for the user account
+  -e, --expiredate EXPIRE_DATE  set account expiration date to EXPIRE_DATE
+  -f, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -g, --gid GROUP               force use GROUP as new primary group
+  -G, --groups GROUPS           new list of supplementary GROUPS
+  -a, --append                  append the user to the supplemental GROUPS
+                                mentioned by the -G option without removing
+                                the user from other groups
+  -h, --help                    display this help message and exit
+  -l, --login NEW_LOGIN         new value of the login name
+  -L, --lock                    lock the user account
+  -m, --move-home               move contents of the home directory to the
+                                new location (use only with -d)
+  -o, --non-unique              allow using duplicate (non-unique) UID
+  -p, --password PASSWORD       use encrypted password for the new password
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -s, --shell SHELL             new login shell for the user account
+  -u, --uid UID                 new UID for the user account
+  -U, --unlock                  unlock the user account
+  -v, --add-subuids FIRST-LAST  add range of subordinate uids
+  -V, --del-subuids FIRST-LAST  remove range of subordinate uids
+  -w, --add-subgids FIRST-LAST  add range of subordinate gids
+  -W, --del-subgids FIRST-LAST  remove range of subordinate gids
+  -Z, --selinux-user SEUSER     new SELinux user mapping for the user account
+
+everton@DESKTOP-S8VGCH6:~$ sudo usermod -c "repreeentante de vendas" ahitt -e 2024-10-25
+everton@DESKTOP-S8VGCH6:~$ sudo usermod -c "gerente de rh" ctee -e 2024-10-25
+everton@DESKTOP-S8VGCH6:~$ pwd
+/home/everton
+everton@DESKTOP-S8VGCH6:~$ sudo usermod ahitt -p P@ssword1234!!
+sudo usermod ahitt -p P@ssword1234pwd
+everton@DESKTOP-S8VGCH6:~$ sudo getent passwd | cut -d: -f1
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+systemd-timesync
+messagebus
+syslog
+_apt
+tss
+uuidd
+tcpdump
+sshd
+landscape
+pollinate
+everton
+ahitt
+ctee
+kath
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd vendas
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd rh
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd pessoal
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd CEO
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd expedicao
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd gerentes
+everton@DESKTOP-S8VGCH6:~$ sudo gpasswd -a ahitt vendas
+Adding user ahitt to group vendas
+everton@DESKTOP-S8VGCH6:~$ sudo gpasswd -a ctee rh
+Adding user ctee to group rh
+everton@DESKTOP-S8VGCH6:~$ sudo gpasswd -a ctee gerentes
+Adding user ctee to group gerentes
+everton@DESKTOP-S8VGCH6:~$ #aswd gerentes fancyawesomeunicornsuperlong123!!!
+everton@DESKTOP-S8VGCH6:~$ pwd
+/home/everton
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd vendas
+groupadd: group 'vendas' already exists
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd rh
+groupadd: group 'rh' already exists
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd financas
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd pessoal
+groupadd: group 'pessoal' already exists
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd CEO
+groupadd: group 'CEO' already exists
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd expedicao
+groupadd: group 'expedicao' already exists
+everton@DESKTOP-S8VGCH6:~$ sudo groupadd gerentes
+groupadd: group 'gerentes' already exists
+everton@DESKTOP-S8VGCH6:~$ sudo -a -G vendas ahitt
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]
+            [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] file ...
+everton@DESKTOP-S8VGCH6:~$    
